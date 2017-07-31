@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "A receipt management application. Save your applications and make handling your budget easier.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
-   "start": "node server.js"
+    "start": "node server.js"
   },
   "author": "Andy Vuong",
   "license": "MIT",

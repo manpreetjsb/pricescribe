@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var request = require('request');
 
 // The url of the mongodb instance the server will connect to
-var url = 'mongodb://localhost:27017/scribe'
+var url = 'mongodb://localhost:27017/scrib'
 
 // cors
 var allowCrossDomain = function(req, res, next) {
@@ -23,7 +23,12 @@ var app = express();
 app.use(bodyParser.json());
 app.use(allowCrossDomain);
 
-mongoose.connect(url);
+var promise = mongoose.connect(url, {
+  useMongoClient: true,
+  /* other options */
+});
+
+// mongoose.connect(url);
 
 // design pattern http://stackoverflow.com/questions/19619936/how-to-separate-the-routes-and-models-from-app-js-using-nodejs-and-express
 // http://expressjs.com/en/4x/api.html#router.route separate the routes and reduce duplication

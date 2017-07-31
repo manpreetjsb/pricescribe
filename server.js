@@ -8,8 +8,8 @@ var mongoose = require('mongoose');
 var request = require('request');
 
 // The url of the mongodb instance the server will connect to
-var url = 'mongodb://localhost:27017/scrib'
-
+//var url = 'mongodb://localhost:27017/scrib'
+var url = 'mongodb://schleierit:TWdPZew2exmZ6PQd@ds123933.mlab.com:23933/pricescribe'
 // cors
 var allowCrossDomain = function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
